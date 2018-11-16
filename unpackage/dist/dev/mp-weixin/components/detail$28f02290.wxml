@@ -1,0 +1,37 @@
+<template name="detail$28f02290">
+  <view class="_view data-v-5bffe666 container clearfix">
+    <view class="_view data-v-5bffe666 {{datum.status_class}}">
+      <view class="_view data-v-5bffe666 head-img">
+        <image src="{{datum.head_img}}" class="_image data-v-5bffe666"></image>
+      </view>
+      <view class="_view data-v-5bffe666 head-con">
+        <text class="_text data-v-5bffe666">{{datum.nick_name}}</text>
+        <text class="_text data-v-5bffe666">{{datum.building_name}} / {{datum.room_name}}</text>
+      </view>
+    </view>
+    <view class="_view data-v-5bffe666 video-wrap"></view>
+    <view class="_view data-v-5bffe666 time">{{datum.ut}}</view>
+    <view class="_view data-v-5bffe666 reply-wrap">
+      <view class="_view data-v-5bffe666 reply-info" v:if="alist.length == 0">暂无回复</view>
+      <view class="_view data-v-5bffe666 reply-list" v:if="alist.length != 0" v:for="(item, index) in alist" key="{{index}}">
+        <view class="_view data-v-5bffe666 reply-head">
+          <image src="{{item.head_img}}" class="_image data-v-5bffe666"></image>
+        </view>
+        <view class="_view data-v-5bffe666 reply-head-con">
+          <text class="_text data-v-5bffe666">{{item.fromU}}</text>
+          <text class="_text data-v-5bffe666">{{item.ut}}</text>
+        </view>
+        <view class="_view data-v-5bffe666 reply-con">
+          <text class="_text data-v-5bffe666">{{item.reply_desc}}</text>
+          <view class="_view data-v-5bffe666 img-box" v:if="item.reply_imgs.length > 0" v:for="(obj, index2)  in item.reply_imgs" key="{{index2}}">
+            <image src="{{current}}" bindtap="changePreview" data-src="{{current}}" data-arr="{{item.reply_imgs}}" class="_image data-v-5bffe666"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-5bffe666 footer">
+      <text catchtap="reminder" class="_text data-v-5bffe666">催单</text>
+      <text catchtap="complaint" class="_text data-v-5bffe666">投诉建议</text>
+    </view>
+  </view>
+</template>

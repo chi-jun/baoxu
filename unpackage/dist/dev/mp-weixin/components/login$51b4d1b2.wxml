@@ -1,0 +1,5 @@
+<template name="login$51b4d1b2">
+  <view class="_view data-v-1513dc7e lable-container">
+    <text class="_text data-v-1513dc7e">正在登陆</text>
+  </view>
+</template>

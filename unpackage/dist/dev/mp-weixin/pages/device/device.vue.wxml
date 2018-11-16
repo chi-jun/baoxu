@@ -1,0 +1,37 @@
+<template name="401c355b">
+  <view class="_view data-v-8c5d28f6 container">
+    <view class="_view data-v-8c5d28f6 device">
+      <view class="_view data-v-8c5d28f6 device-title title-type">
+        <view class="_view data-v-8c5d28f6 title-lx"> 违规类型 </view>
+        <view class="_view data-v-8c5d28f6 title-nr" bindtap="handleProxy" data-eventid="{{'3OS-0'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-8c5d28f6 nr-type"> {{type}} </view>
+          <view class="_view data-v-8c5d28f6 icons uni-icon-arrowright uni-icon"></view>
+        </view>
+      </view>
+      <view class="_view data-v-8c5d28f6 device-title"> 备注信息 </view>
+      <view class="_view data-v-8c5d28f6 textarea-wrp">
+        <textarea class="_textarea data-v-8c5d28f6 textare" placeholder-style="color:#888888" placeholder="请输入备注信息" maxlength="200" bindinput="handleProxy" data-eventid="{{'7pg-1'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_view data-v-8c5d28f6 nums">
+        <view class="_view data-v-8c5d28f6 num"> {{num}}/200 </view>
+      </view>
+      <view class="_view data-v-8c5d28f6 attention"> 注：发言者发布违规内容被举报后，若系统管理员审核通过或有多人举报该记录，发布者发布的所有信息均将被屏蔽且发布者会被禁止发布任何内容。 </view>
+    </view>
+    <view class="_view data-v-8c5d28f6 button" hover-class="button-hover">
+      <button class="_button data-v-8c5d28f6 mini-btn" size="mini" hover-class="button-hover" bindtap="handleProxy" data-eventid="{{'4HM-2'}}" data-comkey="{{$k}}">提交</button>
+    </view>
+    <view class="_view data-v-8c5d28f6 modal-mask" bindtap="handleProxy" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" data-eventid="{{'ekF-3'}}" data-comkey="{{$k}}"></view>
+    <view class="_view data-v-8c5d28f6 wglx" wx:if="{{showModal}}">
+      <view class="_view data-v-8c5d28f6 page-section page-section-gap">
+        <radio-group class="_radio-group data-v-8c5d28f6 group" bindchange="handleProxy" data-eventid="{{'EwT-4'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-8c5d28f6 label-2" wx:key="index" key="{{index}}" wx:for="{{radioItems}}" wx:for-index="index" wx:for-item="item">
+            <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}" color="#007AFF" class="_radio data-v-8c5d28f6" />
+            <label class="_label data-v-8c5d28f6 label-2-text" for="{{item.name}}">
+              <text class="_text data-v-8c5d28f6">{{item.name}}</text>
+            </label>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+</template>

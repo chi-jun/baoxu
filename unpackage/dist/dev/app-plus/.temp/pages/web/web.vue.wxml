@@ -1,0 +1,29 @@
+<template name="691bf26a">
+  <view class="_view data-v-2bda3a22 body-view">
+    <scroll-view class="_scroll-view data-v-2bda3a22 top-menu-view" scroll-x="true" scroll-left="{{scrollLeft}}">
+      <block wx:key="index" key="{{index}}" wx:for="{{menuTabs}}" wx:for-index="index" wx:for-item="menuTab">
+        <view class="_view data-v-2bda3a22 menu-one-view" id="{{'tabNum'+index}}" bindtap="handleProxy" data-eventid="{{'YxP-0-'+index}}" data-comkey="{{$k}}">
+          <view class="_view data-v-2bda3a22 {{[currentTab == index ? 'menu-one-act' : 'menu-one']}}">
+            <view class="_view data-v-2bda3a22 menu-one-txt">{{menuTab.name}}</view>
+            <view class="_view data-v-2bda3a22 menu-one-bottom">
+              <view class="_view data-v-2bda3a22 menu-one-bottom-color"></view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+    <swiper current="{{currentTab}}" class="_swiper data-v-2bda3a22 swiper-box-list" duration="300" bindchange="handleProxy" data-eventid="{{'4bB-2'}}" data-comkey="{{$k}}">
+      <block wx:key="index1" key="{{index1}}" wx:for="{{swiperDateList}}" wx:for-index="index1" wx:for-item="swiperDate">
+        <swiper-item class="_swiper-item data-v-2bda3a22">
+          <scroll-view class="_scroll-view data-v-2bda3a22 swiper-one-list" scroll-y="true" bindscrolltolower="handleProxy" data-eventid="{{'ScD-1-'+index1}}" data-comkey="{{$k}}">
+            <block wx:key="index2" key="{{index2}}" wx:for="{{swiperDate}}" wx:for-index="index2" wx:for-item="swiperDate2">
+              <view class="_view data-v-2bda3a22 swiper-list-entity">
+                <view class="_view data-v-2bda3a22">{{swiperDate2}}</view>
+              </view>
+            </block>
+          </scroll-view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</template>

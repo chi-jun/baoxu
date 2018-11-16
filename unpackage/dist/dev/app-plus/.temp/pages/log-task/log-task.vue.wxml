@@ -1,0 +1,29 @@
+<template name="665fab5b">
+  <view class="_view data-v-51397576 container">
+    <view class="_view data-v-51397576 task-item" wx:key="index2" key="{{index2}}" wx:for="{{list}}" wx:for-index="index2" wx:for-item="school">
+      <view class="_view data-v-51397576 task-school link-item" onclick="openMap('{school_name}','{gl_location}')">{{school.school_name}}</view>
+      <view class="_view data-v-51397576 task-container" bindtap="handleProxy" data-fault="{{item.fault_id}}" data-sl="{{school.school_id}}" wx:key="index" key="{{index}}" data-eventid="{{'4hN-0-'+index2+'-'+index}}" data-comkey="{{$k}}"
+        wx:for="{{school.task}}" wx:for-index="index" wx:for-item="item">
+        <view class="_view data-v-51397576 task-info">
+          <view class="_view data-v-51397576 info-container">
+            <view class="_view data-v-51397576 info-title">工单编号:</view>
+            <view class="_view data-v-51397576 info-desc">{{item.task_num}}</view>
+          </view>
+          <view class="_view data-v-51397576 info-container">
+            <view class="_view data-v-51397576 info-title">报修地址:</view>
+            <view class="_view data-v-51397576 info-desc">{{item.building_name}} / {{item.room_name}}</view>
+          </view>
+          <view class="_view data-v-51397576 info-container">
+            <view class="_view data-v-51397576 info-title">受理时间:</view>
+            <view class="_view data-v-51397576 info-desc">{{item.accept_time}}</view>
+          </view>
+        </view>
+        <view class="_view data-v-51397576 task-status-container">
+          <view class="_view data-v-51397576 task-status-inner">
+            <view class="_view data-v-51397576 {{tag}}"> {{status_str}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

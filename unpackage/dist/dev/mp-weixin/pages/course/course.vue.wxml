@@ -1,0 +1,32 @@
+<template name="b7a5248a">
+  <view class="_view data-v-1de2a3e5 coures">
+    <view class="_view data-v-1de2a3e5 page-section">
+      <view class="_view data-v-1de2a3e5 page-section-title">记录内容</view>
+      <view class="_view data-v-1de2a3e5 textarea-wrp">
+        <textarea class="_textarea data-v-1de2a3e5 textare" placeholder-style="color:#888888" placeholder="请输入记录内容" maxlength="200" bindinput="handleProxy" data-eventid="{{'lgm-0'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_view data-v-1de2a3e5 nums">
+        <view class="_view data-v-1de2a3e5 num"> {{num}}/200 </view>
+      </view>
+      <view class="_view data-v-1de2a3e5 page-section-title">相关照片</view>
+      <view class="_view data-v-1de2a3e5 picture">
+        <view class="_view data-v-1de2a3e5 uni-uploader__files">
+          <block wx:key="index" key="{{index}}" wx:for="{{imageList}}" wx:for-index="index" wx:for-item="image">
+            <view class="_view data-v-1de2a3e5 uni-uploader__file attention">
+              <image class="_image data-v-1de2a3e5 uploader-img" src="{{image}}" data-src="{{image}}"></image>
+              <view class="_view data-v-1de2a3e5 uni-icon-minus-filled uni-icon jians" data-idx="{{index}}" bindtap="handleProxy" data-eventid="{{'Msg-1-'+index}}" data-comkey="{{$k}}"></view>
+            </view>
+          </block>
+        </view>
+        <view class="_view data-v-1de2a3e5 uni-uploader">
+          <view class="_view data-v-1de2a3e5 uploader-input" bindtap="handleProxy" data-eventid="{{'cW1-2'}}" data-comkey="{{$k}}">
+            <image src="../../static/img/photo.png" mode class="_image data-v-1de2a3e5"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-1de2a3e5 button" hover-class="button-hover">
+      <button class="_button data-v-1de2a3e5 mini-btn" size="mini" bindtap="handleProxy" data-eventid="{{'d5I-3'}}" data-comkey="{{$k}}">提交</button>
+    </view>
+  </view>
+</template>

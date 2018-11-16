@@ -1,0 +1,24 @@
+<template name="7d5b83c7">
+  <view class="_view data-v-590a45aa content">
+    <view class="_view data-v-590a45aa access-item" data-access="../log-task/log-task" bindtap="handleProxy" data-eventid="{{'XyD-0'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-590a45aa access-item-inner">
+        <view class="_view data-v-590a45aa info-outer">
+          <view class="_view data-v-590a45aa info-inner">
+            <image src="../../static/img/finish.png" class="_image data-v-590a45aa"></image>
+            <view class="_view data-v-590a45aa access-title">后勤工单</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-590a45aa access-item" data-access="../log-address/log-address" bindtap="handleProxy" data-eventid="{{'wlw-1'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-590a45aa access-item-inner">
+        <view class="_view data-v-590a45aa info-outer">
+          <view class="_view data-v-590a45aa info-inner">
+            <image src="../../static/img/jiaoshi.png" class="_image data-v-590a45aa"></image>
+            <view class="_view data-v-590a45aa access-title">地址管理</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

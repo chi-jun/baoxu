@@ -1,0 +1,84 @@
+
+.container {
+  display: block;
+  width: 100%;
+}
+.task-info {
+  display: block;
+}
+.info-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.task-item {
+  background: white;
+  padding: 16rpx 0 16rpx 16rpx;
+  font-weight: 100;
+  border-bottom: 20rpx solid #EAEAEA;
+}
+.task-item:last-child {
+  border-bottom: none;
+}
+.link-item {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAbFBMVEUAAACKioqKioqKioqUlJSJiYmJiYmIiIiKioqKioqJiYmHh4eNjY2JiYmKioqJiYmKioqKioqKioqIiIiLi4uJiYmJiYmKioqKioqJiYmSkpKKioqJiYmNjY2KioqKioqJiYmJiYmKioqKiorD6jXrAAAAI3RSTlMA+Ej8BN1lS6V1KBUP5tJsXkPyWFHtsjcwIAq9nBrKisWTfzPsyGwAAAINSURBVHja7d1pUsJQEEXhxsSQgSGYIEEZlLf/PeqfWFmAVdx36p4dfFVo5u74x87V49FG/lXpt9VL5N6pSAzJLSWEpEyJIWkTRLJJFMmWIukTRdJYItfeErk4ksoSuTjHE45k4EgKimS0RK61JXJxJAeOZGWJWhzJiSN5s0QtjmSyRK7pSJG0lsgFkmCen5wtkQskeaVIrpbI1VkilyV6dTuKZGOJXCDJjSL54Ei+LFELJPmkSEpL5AJJ3i1RyxK9ypoiCUv0skSviyVyfVsi190SuR4YSWOJXHtL5OJIKkvk6i2Ra+BICopkXEqmyLilZNtFxq0Xkkvk3EJSXCPnFpJ7ZN3hT7KLvBvT3Cbyrp4hWR9Llof4PvLuMEOayLuBAqkhP622gPyxN5B/v5QDIuUUhXLSSDmNp1xYUS51KTcfKLeDKDfoKA7KTWw7tKI8sKI4KI+nKQ7KKxyUl2ooDsqLZxQH5eVMO7SivIhth1SUD2EonybZoZUdWlE+1bVDK8qAAcrIB4wDMuCFMnKHMgTJDq0oDsoIOspQQDu0ogxltUMrygBmykhsO7SiDPKnrFawQyvKQhjKih6Kg7LGyg6tKMv3KOsQ7dCKssSVslbXDq0oy8ApDsrC/CExHL0dUlV2SEVx7O2QqrFDKsrvqoNc18Ya4ogK4ogR4ogW4oi4QBxRNrciHespntQPqIo42u5SG/8AAAAASUVORK5CYII=);
+  background-size: 30rpx;
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  background-position: calc(100% - 20rpx) center;
+}
+.task-school {
+  height: 68rpx;
+  line-height: 68rpx;
+  border-bottom: 1rpx solid gainsboro;
+  border-top: 1rpx solid gainsboro;
+  display: block;
+}
+.task-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1rpx dashed #AEAEAE;
+  overflow: hidden;
+}
+.task-info {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.task-status-inner {
+  padding-top: 25rpx;
+}
+.task-status-container {
+  width: 160rpx;
+  text-align: center;
+}
+.task-status {
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 0 auto;
+}
+.status-doing {
+  border: 1rpx solid #6492FF;
+  color: #6492FF;
+}
+.status-finish {
+  border: 1rpx solid #27E1BA;
+  color: #27E1BA;
+}
+.info-title {
+  color: rgba( 0, 0, 0, 0.5);
+  font-size: 30rpx;
+}
+.info-desc {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 30rpx;
+}

@@ -1,0 +1,15 @@
+<import src="/components/uni-badge.vue.wxml" />
+<template name="5e2e9579">
+  <view class="_view data-v-351cc69d page">
+    <page-head title="{{title}}" class="_page-head data-v-351cc69d"></page-head>
+    <view class="_view data-v-351cc69d uni-card">
+      <view class="_view data-v-351cc69d uni-list">
+        <view class="_view data-v-351cc69d uni-list-cell" hover-class="uni-list-cell-hover" wx:key="key" key="{{key}}" bindtap="handleProxy" data-eventid="{{'00S-0-'+key}}" data-comkey="{{$k}}" wx:for="{{listData}}" wx:for-index="key" wx:for-item="value">
+          <view class="_view data-v-351cc69d uni-list-cell-navigate uni-navigate-right uni-navigate-badge"> {{value.place_str}}
+            <template type="success" data="{{...$root['0'], ...$root[$kk+'zYt-1-'+key],$root}}" is="0e069979"></template>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

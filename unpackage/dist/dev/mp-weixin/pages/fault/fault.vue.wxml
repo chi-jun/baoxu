@@ -1,0 +1,41 @@
+<template name="3c491a67">
+  <view class="_view data-v-db2f186a coures">
+    <view class="_view data-v-db2f186a page-section">
+      <view class="_view data-v-db2f186a page-section-title">故障原因/修复过程</view>
+      <view class="_view data-v-db2f186a textarea-wrp">
+        <textarea class="_textarea data-v-db2f186a textare" placeholder-style="color:#888888" placeholder="请输入故障原因/修复过程" maxlength="200" bindinput="handleProxy" data-eventid="{{'lxf-0'}}" data-comkey="{{$k}}" />
+      </view>
+      <view class="_view data-v-db2f186a nums">
+        <view class="_view data-v-db2f186a num"> {{num}}/200 </view>
+      </view>
+      <view class="_view data-v-db2f186a page-section-title">相关照片</view>
+      <view class="_view data-v-db2f186a picture">
+        <view class="_view data-v-db2f186a uni-uploader__files">
+          <block wx:key="index" key="{{index}}" wx:for="{{imageList}}" wx:for-index="index" wx:for-item="image">
+            <view class="_view data-v-db2f186a uni-uploader__file attention">
+              <image class="_image data-v-db2f186a uploader-img" src="{{image}}" data-src="{{image}}"></image>
+              <view class="_view data-v-db2f186a uni-icon-minus-filled uni-icon jians" data-idx="{{index}}" bindtap="handleProxy" data-eventid="{{'x0U-1-'+index}}" data-comkey="{{$k}}"></view>
+            </view>
+          </block>
+        </view>
+        <view class="_view data-v-db2f186a uni-uploader">
+          <view class="_view data-v-db2f186a uploader-input" bindtap="handleProxy" data-eventid="{{'TBq-2'}}" data-comkey="{{$k}}">
+            <image src="../../static/img/photo.png" mode class="_image data-v-db2f186a"></image>
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-db2f186a xuanz" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'86F-3'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-db2f186a left"> 故障设备 </view>
+        <view class="_view data-v-db2f186a right"> 选择
+          <view class="_view data-v-db2f186a icons uni-icon-arrowright uni-icon"></view>
+        </view>
+      </view>
+      <view class="_view data-v-db2f186a uni-list-cell" wx:key="index" key="{{index}}" wx:for="{{faults}}" wx:for-index="index" wx:for-item="fault">
+        <view class="_view data-v-db2f186a uni-list-cell-navigate"> {{fault}} </view>
+      </view>
+    </view>
+    <view class="_view data-v-db2f186a button" hover-class="button-hover">
+      <button class="_button data-v-db2f186a mini-btn" size="mini" hover-class="button-hover" bindtap="handleProxy" data-eventid="{{'joR-4'}}" data-comkey="{{$k}}">提交</button>
+    </view>
+  </view>
+</template>

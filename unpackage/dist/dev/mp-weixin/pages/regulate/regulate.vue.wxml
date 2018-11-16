@@ -1,0 +1,8 @@
+<template name="4ad5677b">
+  <view class="_view data-v-884dfd36 container">
+    <view class="_view data-v-884dfd36 variety" wx:key="index" key="{{index}}" hover-class="uni-list-cell-hover" bindtap="handleProxy" data-eventid="{{'WAv-0-'+index}}" data-comkey="{{$k}}" wx:for="{{varietys}}" wx:for-index="index" wx:for-item="variety">
+      <view class="_view data-v-884dfd36 variety-title">{{variety.name}}</view>
+      <view class="_view data-v-884dfd36 icons uni-icon-arrowright uni-icon"></view>
+    </view>
+  </view>
+</template>

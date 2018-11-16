@@ -1,0 +1,110 @@
+<template name="43df760a">
+  <view class="_view data-v-57c57b25 content">
+    <view class="_view data-v-57c57b25 container clearfix">
+      <view class="_view data-v-57c57b25 header {{'state' + lists.status}}">
+        <view class="_view data-v-57c57b25 head-img">
+          <image src="{{lists.head_img ? lists.head_img : 'http://tuofu.likonget.com/operation/img/teacher.png'}}" class="_image data-v-57c57b25"></image>
+        </view>
+        <view class="_view data-v-57c57b25 head-con">
+          <text class="_text data-v-57c57b25">{{lists.nick_name ? lists.nick_name : "匿名用户"}}</text>
+          <text class="_text data-v-57c57b25">{{lists.building_name}} / {{lists.room_name}}</text>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 title"> {{lists.fault_desc}} </view>
+      <view class="_view data-v-57c57b25 video-wrap" wx:if="{{lists.imgs}}">
+        <view class="_view data-v-57c57b25 item-images" wx:if="{{lists.file_type==1&&lists.imgs.length>0}}">
+          <image src="{{img}}" wx:key="imgIndex" key="{{imgIndex}}" bindtap="handleProxy" data-eventid="{{'XZ5-0-'+imgIndex}}" data-comkey="{{$k}}" wx:for="{{lists.imgs}}" wx:for-index="imgIndex" wx:for-item="img" class="_image data-v-57c57b25"></image>
+        </view>
+        <view class="_view data-v-57c57b25 video-preview" wx:if="{{lists.file_type==0&&lists.imgs.length>0}}">
+          <image src="{{lists.preview_img}}" class="_image data-v-57c57b25"></image>
+          <view style="position: relative;" class="_view data-v-57c57b25">
+            <view class="_view data-v-57c57b25 play-container">
+              <text class="_text data-v-57c57b25 iconfont icon-play2"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 time">{{lists.ut}}</view>
+      <view class="_view data-v-57c57b25 {{statu != '2' ? 'warp' : 'reply-wrap'}}">
+        <view class="_view data-v-57c57b25 reply-info" wx:if="{{alist.length == 0}}">暂无回复</view>
+        <view class="_view data-v-57c57b25 reply-list" wx:if="{{alist.length != 0}}" wx:key="index" key="{{index}}" wx:for="{{alist}}" wx:for-index="index" wx:for-item="item">
+          <view class="_view data-v-57c57b25 reply-head">
+            <image src="{{item.head_img ? item.head_img : 'http://tuofu.likonget.com/operation/img/teacher.png'}}" class="_image data-v-57c57b25"></image>
+          </view>
+          <view class="_view data-v-57c57b25 reply-head-con">
+            <text class="_text data-v-57c57b25">{{item.fromU ? item.fromU : "匿名用户"}}</text>
+            <text class="_text data-v-57c57b25">{{item.ut}}</text>
+          </view>
+          <view class="_view data-v-57c57b25 reply-con">
+            <rich-text nodes="{{item.reply_desc}}" class="_view data-v-57c57b25"></rich-text>
+            <view class="_view data-v-57c57b25 img-box" wx:if="{{item.reply_imgs.length > 0}}">
+              <image src="{{item.reply_imgs}}" bindtap="handleProxy" data-eventid="{{'4Xu-1-'+index}}" data-comkey="{{$k}}" class="_image data-v-57c57b25"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 modal-mask" bindtap="handleProxy" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" data-eventid="{{'f4H-2'}}" data-comkey="{{$k}}"></view>
+      <view class="_view data-v-57c57b25 modal-dialog" wx:if="{{showModal}}">
+        <view class="_view data-v-57c57b25 modal-title">请输入预约处理时间</view>
+        <view class="_view data-v-57c57b25 modal-content">
+          <view class="_view data-v-57c57b25 modal-input">
+            <textarea placeholder-class="input-holder" type="number" bindinput="handleProxy" class="_textarea data-v-57c57b25 input" data-eventid="{{'Cf7-3'}}" data-comkey="{{$k}}" />
+          </view>
+        </view>
+        <view class="_view data-v-57c57b25 modal-footer">
+          <view class="_view data-v-57c57b25 btn-cancel" bindtap="handleProxy" data-status="cancel" hover-class="uni-list-cell-hover" data-eventid="{{'WGY-4'}}" data-comkey="{{$k}}">取消</view>
+          <view class="_view data-v-57c57b25 btn-confirm" bindtap="handleProxy" data-status="confirm" hover-class="uni-list-cell-hover" data-eventid="{{'Xop-5'}}" data-comkey="{{$k}}">确定</view>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 modal-mask" bindtap="handleProxy" catchtouchmove="preventTouchMove" wx:if="{{showActionSheet}}" data-eventid="{{'IYO-6'}}" data-comkey="{{$k}}"></view>
+      <view class="_view data-v-57c57b25 fault" wx:if="{{showActionSheet}}">
+        <view class="_view data-v-57c57b25 fault-title"> 请确认是否有故障 </view>
+        <view class="_view data-v-57c57b25 fault-wb" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'vHd-7'}}" data-comkey="{{$k}}"> 确认误报 </view>
+        <view class="_view data-v-57c57b25 fault-gz" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'NWL-8'}}" data-comkey="{{$k}}"> 确认有故障 </view>
+        <view class="_view data-v-57c57b25 fault-zb" bindtap="handleProxy" data-eventid="{{'yi7-9'}}" data-comkey="{{$k}}"> 暂不确认 </view>
+      </view>
+    </view>
+    <view class="_view data-v-57c57b25 button" hover-class="button-hover" wx:if="{{statu === 2}}">
+      <button class="_button data-v-57c57b25 mini-btn" size="mini">评价</button>
+    </view>
+    <view class="_view data-v-57c57b25 footer" wx:if="{{statu != 2&&statu != 3}}">
+      <view class="_view data-v-57c57b25 info-text">
+        <view class="_view data-v-57c57b25 item-text" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'Uq1-10'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-57c57b25 text"> 跟踪处理 </view>
+          <view class="_view data-v-57c57b25">
+            <view class="_view data-v-57c57b25 uni-icon-bars uni-icon icons"></view>
+          </view>
+        </view>
+        <view class="_view data-v-57c57b25 item-top" wx:if="{{unfold.unfold1}}">
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'oJN-11'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">过程记录</view>
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'5dy-12'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">我来处理</view>
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'gZT-13'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">指派处理</view>
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'e3a-14'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">确认故障</view>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 info-text">
+        <view class="_view data-v-57c57b25 item-text" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'aUi-15'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-57c57b25 text"> 状态更新 </view>
+          <view class="_view data-v-57c57b25">
+            <view class="_view data-v-57c57b25 uni-icon-bars icons uni-icon"></view>
+          </view>
+        </view>
+        <view class="_view data-v-57c57b25 item-top" wx:if="{{unfold.unfold2}}">
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'Iz1-16'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">检修待续</view>
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'j5G-17'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">检修完成</view>
+        </view>
+      </view>
+      <view class="_view data-v-57c57b25 info-text">
+        <view class="_view data-v-57c57b25 item-text" bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'1p9-18'}}" data-comkey="{{$k}}">
+          <view class="_view data-v-57c57b25 text"> 更多 </view>
+          <view class="_view data-v-57c57b25">
+            <view class="_view data-v-57c57b25 uni-icon-bars uni-icon icons"></view>
+          </view>
+        </view>
+        <view class="_view data-v-57c57b25 item-top" wx:if="{{unfold.unfold3}}">
+          <view bindtap="handleProxy" hover-class="uni-list-cell-hover" data-eventid="{{'ANg-19'}}" data-comkey="{{$k}}" class="_view data-v-57c57b25">举报违规内容</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

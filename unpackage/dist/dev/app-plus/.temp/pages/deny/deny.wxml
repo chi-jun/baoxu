@@ -1,0 +1,1 @@
+<import src="/pages/deny/deny.vue.wxml" /><template is="a99307ca" data="{{ ...$root['0'], $root }}"/>

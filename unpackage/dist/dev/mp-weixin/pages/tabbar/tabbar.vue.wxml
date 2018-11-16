@@ -1,0 +1,18 @@
+<template name="7a2cdc5b">
+  <view class="_view data-v-183bdaf6">
+    <button class="_button data-v-183bdaf6 show-btn" bindtap="handleProxy" data-eventid="{{'K2Y-0'}}" data-comkey="{{$k}}">弹窗</button>
+    <view class="_view data-v-183bdaf6 modal-mask" bindtap="handleProxy" catchtouchmove="preventTouchMove" wx:if="{{showModal}}" data-eventid="{{'DQX-1'}}" data-comkey="{{$k}}"></view>
+    <view class="_view data-v-183bdaf6 wglx" wx:if="{{showModal}}">
+      <view class="_view data-v-183bdaf6 page-section page-section-gap" wx:key="index" key="{{index}}" wx:for="{{radioItems}}" wx:for-index="index" wx:for-item="item">
+        <radio-group class="_radio-group data-v-183bdaf6 group" bindtap="handleProxy" data-eventid="{{'bpE-2-'+index}}" data-comkey="{{$k}}">
+          <view class="_view data-v-183bdaf6 label-2">
+            <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}" color="#007AFF" class="_radio data-v-183bdaf6" />
+            <label class="_label data-v-183bdaf6 label-2-text" for="{{item.name}}">
+              <text class="_text data-v-183bdaf6">{{item.name}}</text>
+            </label>
+          </view>
+        </radio-group>
+      </view>
+    </view>
+  </view>
+</template>

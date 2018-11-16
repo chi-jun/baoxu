@@ -1,0 +1,17 @@
+<template name="323753cb">
+  <view class="_view data-v-ef5d50a2 container">
+    <view class="_view data-v-ef5d50a2 designate" wx:key="index" key="{{index}}" hover-class="uni-list-cell-hover" wx:for="{{designates}}" wx:for-index="index" wx:for-item="item">
+      <radio-group class="_radio-group data-v-ef5d50a2 group" bindtap="handleProxy" data-eventid="{{'S0O-0-'+index}}" data-comkey="{{$k}}">
+        <view class="_view data-v-ef5d50a2 label-2">
+          <radio id="{{item.name}}" value="{{item.name}}" checked="{{item.checked}}" class="_radio data-v-ef5d50a2" />
+          <label class="_label data-v-ef5d50a2 label-2-text" for="{{item.name}}">
+            <text class="_text data-v-ef5d50a2">{{item.name}}</text>(
+            <text class="_text data-v-ef5d50a2">{{item.text}}</text>) </label>
+        </view>
+      </radio-group>
+    </view>
+    <view class="_view data-v-ef5d50a2 button" hover-class="button-hover">
+      <button class="_button data-v-ef5d50a2 mini-btn" size="mini" bindtap="handleProxy" data-eventid="{{'dPJ-1'}}" data-comkey="{{$k}}">指派</button>
+    </view>
+  </view>
+</template>

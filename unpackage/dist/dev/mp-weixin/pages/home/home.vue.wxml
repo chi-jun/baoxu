@@ -1,0 +1,17 @@
+<template name="9574500a">
+  <view class="_view data-v-dffccb36 content">
+    <view class="_view data-v-dffccb36 access-item" wx:key="item.id" key="{{item.id}}" data-access="{{item.access}}" bindtap="handleProxy" data-eventid="{{'C5e-0-'+index}}" data-comkey="{{$k}}" wx:for="{{modules}}" wx:for-index="index" wx:for-item="item">
+      <view class="_view data-v-dffccb36 access-item-inner">
+        <view class="_view data-v-dffccb36 info-outer">
+          <view class="_view data-v-dffccb36 info-inner">
+            <image src="{{item.imgurl}}" class="_image data-v-dffccb36"></image>
+            <view class="_view data-v-dffccb36 access-title"> {{item.title}} </view>
+          </view>
+        </view>
+        <view class="_view data-v-dffccb36 do-num-container" wx:if="{{item.num}}">
+          <view class="_view data-v-dffccb36 do-num-inner"> {{task_num}} </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

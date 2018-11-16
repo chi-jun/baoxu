@@ -1,0 +1,41 @@
+
+page {
+  width: 100%;
+  height: 100%;
+}
+._button {
+  float: right;
+}
+.group {
+  margin-left: 30rpx;
+}
+.designate:nth-child(1) .group {
+  margin-left: 0;
+}
+.designate:nth-child(1) .group radio {
+  margin-left: 40rpx;
+}
+.label-2 {
+  border-top: 1rpx solid #E5E5E5;
+  line-height: 80rpx;
+}
+.label-2-text {
+  margin-left: 20rpx;
+}
+radio {
+  margin-left: 10rpx;
+}
+.button {
+  font-size: 28.000000000000004rpx;
+  position: absolute;
+  right: 30rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.mini-btn {
+  background: #6492FF;
+  color: white;
+}
+.button-hover ._button {
+  background: #007AFF;
+}

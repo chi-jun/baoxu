@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_809130_t17njmgyj8h.eot');
+  src: url('//at.alicdn.com/t/font_809130_t17njmgyj8h.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_809130_t17njmgyj8h.woff') format('woff'),
+	url('//at.alicdn.com/t/font_809130_t17njmgyj8h.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_809130_t17njmgyj8h.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 100rpx;
+  font-style: normal;
+  color: #6492FF;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2rpx;
+  -moz-osx-font-smoothing: grayscale;
+}
+view {
+  display: block;
+}
+.container {
+  width: 100%;
+  text-align: center;
+}
+.iconfont {
+  font-size: 180rpx;
+  color: #F96A6A;
+}
+.opt-icon {
+  margin-top: 15%;
+}
+.opt-lable {
+  margin-top: 8rpx;
+  font-size: 40rpx;
+}
+.opt-desc {
+  padding: 24rpx;
+  font-size: 30rpx;
+  color: #888888;
+}
+.opt-button-container {
+  padding: 24rpx;
+  font-size: 30rpx;
+}
+.primary-btn {
+  background: #6492FF;
+  color: white;
+}

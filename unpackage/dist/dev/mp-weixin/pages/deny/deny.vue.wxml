@@ -1,0 +1,16 @@
+<template name="a99307ca">
+  <view class="_view data-v-f41b82f6 container">
+    <view class="_view data-v-f41b82f6 opt-icon">
+      <text class="_text data-v-f41b82f6 iconfont"></text>
+    </view>
+    <view class="_view data-v-f41b82f6 opt-lable">
+      <text class="_text data-v-f41b82f6">无权访问</text>
+    </view>
+    <view class="_view data-v-f41b82f6 opt-desc">
+      <text class="_text data-v-f41b82f6">您还不是任何学校管理人员。若您已经申请并通过成为学校管理人员，请点击以下按钮刷新授权。</text>
+    </view>
+    <view class="_view data-v-f41b82f6 opt-button-container">
+      <button type="default" size="{{primarySize}}" bindtap="handleProxy" data-eventid="{{'2rx-0'}}" data-comkey="{{$k}}" class="_button data-v-f41b82f6"> 刷新授权 </button>
+    </view>
+  </view>
+</template>

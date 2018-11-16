@@ -1,0 +1,1 @@
+<import src="/pages/log-task/log-task.vue.wxml" /><template is="665fab5b" data="{{ ...$root['0'], $root }}"/>

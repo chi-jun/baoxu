@@ -1,0 +1,47 @@
+<template name="6a2aad0a">
+  <view class="_view data-v-449fdfa5 container">
+    <view class="_view data-v-449fdfa5 top-tab">
+      <view class="_view data-v-449fdfa5 top-tab-item {{tab.active ? 'active' : ''}}" bindtap="handleProxy" wx:key="index" key="{{index}}" data-eventid="{{'iGc-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabs}}" wx:for-index="index" wx:for-item="tab">{{tab.name}}</view>
+    </view>
+    <scroll-view class="_scroll-view data-v-449fdfa5 tasks-container" wx:key="taskIndex" key="{{taskIndex}}" hidden="{{!(taskIndex==selectedIndex)}}" bindscrolltolower="handleProxy" scroll-y id="{{'tab'+taskIndex}}" data-eventid="{{'Le5-2-'+taskIndex}}"
+      data-comkey="{{$k}}" wx:for="{{taskList}}" wx:for-index="taskIndex" wx:for-item="tasks" style=" {{('height:' + (content_height + 'px') + ';')}}">
+      <view class="_view data-v-449fdfa5 task-item" wx:key="index" key="{{index}}" wx:for="{{tasks}}" wx:for-index="index" wx:for-item="task">
+        <view bindtap="handleProxy" data-eventid="{{'RX0-1-'+taskIndex+'-'+index}}" data-comkey="{{$k}}" class="_view data-v-449fdfa5">
+          <view class="_view data-v-449fdfa5 item-header">
+            <view class="_view data-v-449fdfa5">
+              <image src="{{task.head_img?task.head_img:'http://tuofu.likonget.com/operation/img/teacher.png'}}" class="_img data-v-449fdfa5 user-avatar"></image>
+            </view>
+            <view class="_view data-v-449fdfa5 user-item-info">
+              <view class="_view data-v-449fdfa5 item-title-row">
+                <view class="_view data-v-449fdfa5 user-name">
+                  <text class="_text data-v-449fdfa5">{{task.nick_name ? task.nick_name :"匿名用户"}}</text>
+                </view>
+                <view class="_view data-v-449fdfa5 item-subtitle">
+                  <text class="_text data-v-449fdfa5 baoxiu-room">{{task.building_name}}/{{task.room_name}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="_view data-v-449fdfa5 status-inner">
+              <text class="_text data-v-449fdfa5 state {{'status-' + task.tag}}">{{task.status_str}}</text>
+            </view>
+          </view>
+          <view class="_view data-v-449fdfa5 baoxiu-content"> {{task.fault_desc}}</view>
+          <view class="_view data-v-449fdfa5 item-images" wx:if="{{task.file_type==1&&task.imgs.length>0}}">
+            <image src="{{img}}" wx:key="imgIndex" key="{{imgIndex}}" wx:for="{{task.imgs}}" wx:for-index="imgIndex" wx:for-item="img" class="_image data-v-449fdfa5"></image>
+          </view>
+          <view class="_view data-v-449fdfa5 video-preview" wx:if="{{task.file_type==0&&task.imgs.length>0}}">
+            <image src="{{task.preview_img}}" class="_image data-v-449fdfa5"></image>
+            <view style="position: relative;" class="_view data-v-449fdfa5">
+              <view class="_view data-v-449fdfa5 play-container">
+                <text class="_text data-v-449fdfa5 iconfont icon-play2"></text>
+              </view>
+            </view>
+          </view>
+          <view class="_view data-v-449fdfa5 detail-site">
+            <text class="_text data-v-449fdfa5">{{task.ut}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

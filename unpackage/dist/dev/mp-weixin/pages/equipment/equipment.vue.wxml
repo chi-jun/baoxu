@@ -1,0 +1,17 @@
+<template name="b68e7782">
+  <view class="_view data-v-0a5a6fba container">
+    <view class="_view data-v-0a5a6fba designate" wx:key="index" key="{{index}}" hover-class="uni-list-cell-hover" wx:for="{{radioItems}}" wx:for-index="index" wx:for-item="item">
+      <radio-group class="_radio-group data-v-0a5a6fba group" bindtap="handleProxy" data-eventid="{{'SCb-0-'+index}}" data-comkey="{{$k}}">
+        <view class="_view data-v-0a5a6fba label-2">
+          <radio id="{{item.device_id}}" value="{{item.lable}}" checked="{{item.checked}}" class="_radio data-v-0a5a6fba" />
+          <label class="_label data-v-0a5a6fba label-2-text" for="{{item.lable}}">
+            <text class="_text data-v-0a5a6fba">{{item.lable}}</text>(
+            <text class="_text data-v-0a5a6fba">{{item.barcode}}</text>) </label>
+        </view>
+      </radio-group>
+    </view>
+    <view class="_view data-v-0a5a6fba button" hover-class="button-hover">
+      <button class="_button data-v-0a5a6fba mini-btn" size="mini" bindtap="handleProxy" data-eventid="{{'I5L-1'}}" data-comkey="{{$k}}">提交</button>
+    </view>
+  </view>
+</template>
